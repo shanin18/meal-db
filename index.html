@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal DB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <nav class="container mx-auto px-1 py-4 flex items-center justify-between">
+            <img src="images/Tasty_HUT.png" alt="">
+            <button class="bg-yellow-400 font-bold py-2 md:py-3 px-4 md:px-7 hover:bg-yellow-500 rounded-md">Sign Up</button>
+        </nav>
+
+        <div class="banner bg-no-repeat bg-cover flex items-center justify-center bg-fixed bg-blend-multiply">
+            <div class="text-center">
+                <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-white  ">Taste Our Delicious <br> Best Food</h1>
+                <p class="text-white text-lg mt-6 my-8">There are many variations of passages of Lorem Ipsum available, but the majority have <br> suffered alteration in some form, by injected humou.</p>
+                <div>
+                    <input id="input-search" class="w-[60vw] lg:w-[40vw] py-3 md:py-4 px-5 md:px-7 rounded-md outline-none" type="text" placeholder="Search any food">
+                    <button onclick="loadSearchMeal()" id="btn-search" class="bg-yellow-400 font-bold py-3 md:py-4 px-5 md:px-6 hover:bg-yellow-500 rounded-md -m-3">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="food" class="container mx-auto my-32">
+            <h1 class="text-4xl font-bold text-center">Your Favourite Food</h1>
+            <h1 id="nothing-found" class="text-3xl text-red-600 text-center mt-8   hidden">Oopsssss! Nothing found...</h1>
+            <div id="meals-container" class="grid md:grid-cols-2 gap-6 my-14">
+                <!-- meal items -->
+               
+            </div>
+           <div class="flex justify-center">
+            <button id="btn-see-all" class="bg-yellow-400 font-bold py-3 px-5 md:px-8 hover:bg-yellow-500 rounded-md mx-auto text-lg hidden">See All</button>
+           </div>
+            
+
+            <!-- for modal -->
+            <div>
+                <input type="checkbox" id="my-modal" class="modal-toggle" />
+                <div class="modal">
+                <div class="modal-box" id="meal-body">
+                    <div id="meal-img">
+
+                    </div>
+                    <h3 class="font-bold text-xl" id="meal-name">Congratulations random Internet user!</h3>
+                    <p id="meal-details">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <div class="modal-action">
+                    <label for="my-modal" class="btn">Close</label>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- <img id="loader" class="" src="images/loader1.gif" alt=""> -->
+    </main>
+    
+    <footer class="bg-amber-50 py-24 px-3">
+        <div class="container mx-auto flex flex-wrap justify-between">
+            <div>
+                <h3 class="font-bold text-3xl">Section</h3>
+                <ul class="font-semibold text-xl mt-12">
+                    <li class="mb-5">Home</li>
+                    <li class="mb-5">Features</li>
+                    <li class="mb-5">Pricing</li>
+                    <li class="mb-5"></li>
+                    <li class="mb-5">About</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-3xl">Service</h3>
+                <ul class="font-semibold text-xl mt-12">
+                    <li class="mb-5">UIUX Design</li>
+                    <li class="mb-5">Product Design</li>
+                    <li class="mb-5">Back End Developer</li>
+                    <li class="mb-5">Front End Developer</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-3xl">Resource</h3>
+                <ul class="font-semibold text-xl mt-12">
+                    <li class="mb-5">FAQs</li>
+                    <li class="mb-5">Support</li>
+                    <li class="mb-5">Privacy Policy</li>
+                    <li class="mb-5">Terms of Service</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-3xl">Resource</h3>
+                <p class="text-xl text-gray-600 mt-12 mb-6">There are many variations of passages of available, <br> but the majority have suffered</p>
+                <div>
+                    <input id="input-search" class="p-3 md:py-4 md:px-6 rounded-md outline-none bg-transparent border text-xl" type="text" placeholder="Email Address">
+                    <button onclick="loadSearchMeal()" id="btn-search" class="bg-yellow-400 font-bold py-3 md:py-4 px-5 md:px-6 hover:bg-yellow-500 rounded-md text-xl mt-3">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
