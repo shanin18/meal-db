@@ -82,7 +82,7 @@ document.getElementById("btn-see-all").addEventListener("click",()=>{
     loadMeals(search);
 })
 
-loadMeals("fish");
+loadMeals("fish", 10);
 
 // window.addEventListener("load",()=>{
 //     const loader = document.getElementById("loader");
